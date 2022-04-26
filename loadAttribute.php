@@ -61,6 +61,7 @@ try {
             $logger->info(sprintf('Product Data not available for given Product id %s', $product_id));
             continue;
         }
+        echo 'Product Data is available for given Product id : ' . $product_id . PHP_EOL;
         $logger->info('Entity ID : ' . $item->getData('entity_id'));
         $logger->info('Name: ' . $item->getData('name'));
         $logger->info('Stock Status isInStock : ' . $stockService->isInStock($item));
