@@ -32,8 +32,9 @@ $storeManager = $objectManager->get('\Magento\Store\Model\StoreManagerInterface'
 //Change store id if needed
 $storeID = $argv[1] ?? 1;
 
-$writer = new \Zend\Log\Writer\Stream(BP . '/var/log/Klevu_Script.log');
-$logger = new \Zend\Log\Logger();
+
+$writer = new \Laminas\Log\Writer\Stream(BP . '/var/log/Klevu_Script.log');
+$logger = new \Laminas\Log\Logger();
 $logger->addWriter($writer);
 $logger->info('Logger Started');
 echo 'Logger started for storeID : ' . $storeID . PHP_EOL;
