@@ -32,8 +32,8 @@ $product_ids = $argv[1] ? explode(',', $argv[1]) : '';
 //Change store id if needed
 $storeID = 1;
 
-$writer = new \Zend\Log\Writer\Stream(BP . '/var/log/Klevu_Script_LoadAttribute.log');
-$logger = new \Zend\Log\Logger();
+$writer = new \Laminas\Log\Writer\Stream(BP . '/var/log/Klevu_Script_LoadAttribute.log');
+$logger = new \Laminas\Log\Logger();
 $logger->addWriter($writer);
 $logger->info(' *********************** LoadAttribute Start ***********************');
 $logger->info('Store ID: ' . $storeID);
